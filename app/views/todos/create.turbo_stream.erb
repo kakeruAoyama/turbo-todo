@@ -1,0 +1,8 @@
+<%= turbo_stream.append 'todos' do %>
+  <%= render @todo %>
+<% end %>
+
+<%= turbo_stream.replace 'new_todo' do %>
+  <%= turbo_frame_tag 'new_todo', src: new_todo_path do %>
+  <% end %>
+<% end %>
